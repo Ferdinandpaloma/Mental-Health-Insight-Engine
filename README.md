@@ -6,7 +6,12 @@ A comprehensive data analytics project that analyzes student mental health patte
 
 ## Project Overview
 
-This project analyzes 10,000+ simulated student data points to:
+This project analyzes student mental health data from multiple sources:
+- **Kaggle Student Mental Health Dataset** (101 records)
+- **Student Habits & Performance Dataset** (1,000 records)
+- **Combined Dataset** (~1,100+ records)
+
+The analysis includes:
 - Detect campus stress patterns using clustering and correlation analysis
 - Identify peak stress periods and model high-risk academic weeks
 - Classify distinct at-risk student groups through statistical modeling
@@ -84,14 +89,25 @@ mkdir -p data/raw data/processed data/outputs
 
 ## Usage
 
-### Quick Start with Kaggle Dataset
+### Quick Start with Expanded Dataset (Recommended)
 
-If you have the Kaggle Student Mental Health dataset:
+For the complete analysis with both datasets:
 
 ```bash
 # Install dependencies
 pip install -r requirements.txt
 
+# Run expanded analysis (Kaggle + Habits datasets)
+python src/run_expanded_analysis.py
+```
+
+See [EXPANDED_DATASET_GUIDE.md](EXPANDED_DATASET_GUIDE.md) for detailed instructions.
+
+### Quick Start with Kaggle Dataset Only
+
+If you have only the Kaggle Student Mental Health dataset:
+
+```bash
 # Adapt and analyze Kaggle dataset
 python src/run_kaggle_analysis.py
 ```
